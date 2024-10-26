@@ -95,7 +95,7 @@
         morph_LBKT: morph_LBKT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LBRK>, <&morph_LBKTT>;
+            bindings = <&kp LBKT>, <&morph_LBKTT>;
             mods = <(MOD_LCTL |MOD_RCTL)>;
         };
         morph_RBKTT: morph_RBKTT {
@@ -107,7 +107,7 @@
         morph_RBKT: morph_RBKT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBRK>, <&morph_RBKTT>;
+            bindings = <&kp RBKT>, <&morph_RBKTT>;
             mods = <(MOD_LCTL |MOD_RCTL)>;
         };
         morph_BCKSP: morph_BCKSP {
