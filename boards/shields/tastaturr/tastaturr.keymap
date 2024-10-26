@@ -165,7 +165,7 @@
             bindings = <
 &kp ESC                         &kp N1  &kp N2  &kp N3      &kp N4         &kp N5                                  &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp 
 &kp TAB                         &kp Q   &kp W   &kp F       &kp P          &kp B                                   &kp J  &kp L    &kp U     &kp Y   &kp SEMI    &kp 
-&mt LEFT_CONTROLL RIGHT_CONTROL &kp A   &kp R   &kp S       &kp T          &kp G                                   &kp M  &kp N    &kp E     &kp I   &kp O    &kp LALT
+&mt LEFT_CONTROL RIGHT_CONTROL &kp A   &kp R   &kp S       &kp T          &kp G                                   &kp M  &kp N    &kp E     &kp I   &kp O    &kp LALT
 &mt LEFT_SHIFT RIGHT_SHIFT      &kp Z   &kp X   &kp C       &kp D          &kp V       &kp LBKT       &kp RBKT     &kp K  &kp H    &kp COMMA &kp PERIOD  &kp SLASH  &kp LGUI
                                                             &sk LEFT_SHIFT &kp SPACE   &mo 2          &mo 3        &kp ENTER       &sk LEFT_CONTROL
             >;
@@ -263,16 +263,16 @@
 //enable Gaming       &tog GAM        Auf Sys
 //enable sysstem      &lt SYS         Auf Home und Gaming
 
-Gaming 58 tasten
-F1-F12              12
-1-12                12
-Pfeil               4
-Buchstaben          26
-controll
-SHIFT
-TAB
-ESC
-ENTER
-backspace delete    1
-pg up down          2
-alt altgr           1
+// Gaming 58 tasten
+// F1-F12              12
+// 1-12                12
+// Pfeil               4
+// Buchstaben          26
+// controll
+// SHIFT
+// TAB
+// ESC
+// ENTER
+// backspace delete    1
+// pg up down          2
+// alt altgr           1
