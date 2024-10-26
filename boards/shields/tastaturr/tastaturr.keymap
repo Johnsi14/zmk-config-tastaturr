@@ -134,7 +134,7 @@
 &kp TAB                         &kp Q   &kp W   &kp F       &kp P               &kp B                                       &kp J       &kp L           &kp U     &kp Y         &kp SEMI    &kp MINUS
 &mt LEFT_CONTROL RIGHT_CONTROL  &kp A   &kp R   &kp S       &kp T               &kp G                                       &kp M       &kp N           &kp E     &kp I         &kp O       &mt LALT RALT
 &mt LEFT_SHIFT RIGHT_SHIFT      &kp Z   &kp X   &kp C       &kp D               &kp V       &kp LBKT       &kp RBKT         &kp K       &kp H           &kp COMMA &kp PERIOD    &kp SLASH   &mt LGUI GRAVE
-                                                            &sk LEFT_CONTROLL   &kp SPACE   &mo 2          &kp BACKSPACE    &kp ENTER   &sk LEFT_SHIFT
+                                                            &sk LEFT_CONTROL   &kp SPACE   &sl SYM          &kp BACKSPACE    &kp ENTER   &sk LEFT_SHIFT
             >;
 
             
