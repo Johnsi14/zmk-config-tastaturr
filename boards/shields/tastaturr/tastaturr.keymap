@@ -25,35 +25,63 @@
 //        tap-ms = <20>;
 //        bindings = <&kp RALT &kp Q>;
 //)
-ZMK_MACRO(macro_ue,
-        wait-ms = <10>;
-        tap-ms = <20>;
-        bindings = <&kp RALT &kp Y>;
-)
-ZMK_MACRO(macro_oe,
-        wait-ms = <10>;
-        tap-ms = <20>;
-        bindings = <&kp RALT &kp P>;
-)
-ZMK_MACRO(macro_wdf,
-        wait-ms = <10>;
-        tap-ms = <20>;
-        bindings = <&kp DELETE &kp LEFT_CONTROL >        
-)
-ZMK_MACRO(macro_wdr,
-        wait-ms = <10>;
-        tap-ms = <20>;
-        bindings = <&kp BACKSPACE &kp LEFT_CONTROL >        
-)
+//ZMK_MACRO(macro_ue,
+//        wait-ms = <10>;
+//        tap-ms = <20>;
+//        bindings = <&kp RALT &kp Y>;
+//)
+//ZMK_MACRO(macro_oe,
+//        wait-ms = <10>;
+//        tap-ms = <20>;
+//        bindings = <&kp RALT &kp P>;
+//)
+//ZMK_MACRO(macro_wdf,
+//        wait-ms = <10>;
+//        tap-ms = <20>;
+//        bindings = <&kp DELETE &kp LEFT_CONTROL >        
+//)
+//ZMK_MACRO(macro_wdr,
+//        wait-ms = <10>;
+//        tap-ms = <20>;
+//        bindings = <&kp BACKSPACE &kp LEFT_CONTROL >        
+//)
 
 / {
     macros {
-    macro_ae: macro_ae {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <10>;
-        tap-ms = <20>;
-        bindings = <&kp RALT &kp Q>;
+        macro_ae: macro_ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp RALT &kp Q>;
+        };
+        macro_ue: macro_ue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp RALT &kp Y>;
+        };
+        macro_oe: macro_oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp RALT &kp P>;
+        };
+        macro_wdf: macro_wdf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp DELETE &kp LEFT_CONTROL >
+        };
+        macro_wdr: macro_wdr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp BACKSPACE &kp LEFT_CONTROL > 
         };
     };
     
