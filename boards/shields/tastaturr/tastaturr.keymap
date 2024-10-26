@@ -156,12 +156,13 @@
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
             bindings = <
 &kp F1      &kp F2      &kp F3      &kp F4          &kp F5         &kp F6                               &kp F7      &kp F8      &kp F9      &kp F10     &kp F11         &kp F12
-&trans      &kp PG_UP   &mkp MCLK   &kp PG_DN       &kp K_UNDO     &kp K_AGAIN                          &kp EQUAL   &kp BLSH    &kp UNDER   &kp AMPS    &trans          &trans
+&trans      &kp PG_UP   &trans      &kp PG_DN       &kp K_UNDO     &kp K_AGAIN                          &kp EQUAL   &kp BLSH    &kp UNDER   &kp AMPS    &trans          &trans
 &trans      &mkp LCLK   &kp UP      &mkp RCLK       &kp K_COPY     &kp K_CUT                            &kp PLUS    &kp PIPE    &kp TILDE   &kp PRCNT   &key_repeat     &trans
 &trans      &kp LEFT    &kp DOWN    &kp RIGHT       &kp K_PASTE    &kp CAPS      &trans      &trans     &macro_wdr  &macro_wdf  &trans      &trans      &trans          &kp K_APP 
                                                     &trans         &trans        &mo BAS     &trans     &trans      &trans
             >;
 
+// Replace the second COlumn with: &trans      &kp PG_UP   &mkp MCLK   &kp PG_DN       &kp K_UNDO     &kp K_AGAIN                          &kp EQUAL   &kp BLSH    &kp UNDER   &kp AMPS    &trans          &trans
             
 //        };
         Behaviour {
