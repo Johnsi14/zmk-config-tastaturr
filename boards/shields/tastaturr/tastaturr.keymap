@@ -19,11 +19,12 @@
     hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
 };
 
-ZMK_MACRO(macro_ae,
-        wait-ms = <10>;
-        tap-ms = <20>;
-        bindings = <&kp RALT &kp Q>;
-)
+
+// ZMK_MACRO(macro_ae,
+//        wait-ms = <10>;
+//        tap-ms = <20>;
+//        bindings = <&kp RALT &kp Q>;
+//)
 ZMK_MACRO(macro_ue,
         wait-ms = <10>;
         tap-ms = <20>;
@@ -46,6 +47,16 @@ ZMK_MACRO(macro_wdr,
 )
 
 / {
+    macros {
+    macro_ae: macro_ae {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <10>;
+        tap-ms = <20>;
+        bindings = <&kp RALT &kp Q>;
+        };
+    };
+    
     behaviors {
         morph_LBKTT: morph_LBKTT {
             compatible = "zmk,behavior-mod-morph";
@@ -168,7 +179,7 @@ ZMK_MACRO(macro_wdr,
 
             
         };
-    }
+    };
 };
 // Layer 1 Normales Home
 // Layer 2 Deutsches Home                   Im Behaviour Layer Enable / Disable
