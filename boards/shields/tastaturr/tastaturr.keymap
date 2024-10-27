@@ -156,7 +156,7 @@
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
             bindings = <
 &kp F1      &kp F2      &kp F3      &kp F4          &kp F5         &kp F6                               &kp F7      &kp F8      &kp F9      &kp F10     &kp F11         &kp F12
-&trans      &kp PG_UP   &mkp MB3    &kl PG_DN       &kp K_UNDO     &kp K_AGAIN                          &kp EQUAL   &kp BSLH    &kp UNDER   &kp AMPS    &trans          &trans
+&trans      &kp PG_UP   &mkp MB3    &kp PG_DN       &kp K_UNDO     &kp K_AGAIN                          &kp EQUAL   &kp BSLH    &kp UNDER   &kp AMPS    &trans          &trans
 &trans      &mkp MB1    &kp UP      &mkp MB2        &kp K_COPY     &kp K_CUT                            &kp PLUS    &kp PIPE    &kp TILDE   &kp PRCNT   &key_repeat     &trans
 &trans      &kp LEFT    &kp DOWN    &kp RIGHT       &kp K_PASTE    &kp CAPS      &trans      &trans     &macro_wdr  &macro_wdf  &trans      &trans      &trans          &kp K_APP 
                                                     &trans         &trans        &mo BAS     &trans     &trans      &trans
