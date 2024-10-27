@@ -13,5 +13,6 @@ if SHIELD_TASTATURR_LEFT || SHIELD_TASTATURR_RIGHT
 
 config ZMK_SPLIT
     default y
-
+config CONFIG_ZMK_MOUSE
+    default y
 endif
