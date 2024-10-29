@@ -53,6 +53,7 @@
     };
     chosen {
         zephyr,display = &oled;
+        zmk,underglow = &led_strip;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &default_layout;
     };
