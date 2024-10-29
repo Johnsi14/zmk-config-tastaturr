@@ -20,7 +20,7 @@
 
 include:
  - board: nice_nano_v2
-   shield: tastaturr_left nice_view_adapter nice_view
+   shield: tastaturr_left
    snippet: studio-rpc-usb-uart
  - board: nice_nano_v2
-   shield: tastaturr_right nice_view_adapter nice_view
+   shield: tastaturr_right
