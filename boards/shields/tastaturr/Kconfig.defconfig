@@ -11,15 +11,7 @@ config ZMK_WIDGET_WPM_STATUS
     bool
     default y
 
-//config ZMK_USB
-//    default y
 endif
-
-//if SHIELD_TASTATURR_RIGHT
-//
-//config ZMK_USB
-//    default n
-//endif
 
 if SHIELD_TASTATURR_LEFT || SHIELD_TASTATURR_RIGHT
 
