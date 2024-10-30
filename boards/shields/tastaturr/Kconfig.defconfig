@@ -15,10 +15,12 @@ config ZMK_WPM
     bool
     default y
 
+endif
+
+if SHIELD_TASTATURR_RIGHT
 config ZMK_USB
     bool
-    default y
-endif
+    default n
 
 if SHIELD_TASTATURR_LEFT || SHIELD_TASTATURR_RIGHT
 
@@ -41,4 +43,7 @@ config LED
     bool
     default y
 
+config ZMK_EVENT_MANAGER
+    bool
+    default y
 endif
