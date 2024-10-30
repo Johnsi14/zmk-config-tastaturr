@@ -18,8 +18,8 @@ config ZMK_WPM
 endif
 
 if SHIELD_TASTATURR_RIGHT
+
 config ZMK_USB
-    bool
     default n
 
 endif
