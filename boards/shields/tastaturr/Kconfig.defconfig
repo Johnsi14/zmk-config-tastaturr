@@ -22,6 +22,8 @@ config ZMK_USB
     bool
     default n
 
+endif
+
 if SHIELD_TASTATURR_LEFT || SHIELD_TASTATURR_RIGHT
 
 config ZMK_SPLIT
