@@ -21,4 +21,17 @@ config ZMK_SPLIT
 config CONFIG_ZMK_MOUSE
     bool
     default y
+
+config ZMK_UNDERGLOW
+    bool
+    default y
+
+config WS2812_STRIP
+    bool
+    default y
+
+config LED
+    bool
+    default y
+
 endif
