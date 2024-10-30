@@ -17,6 +17,11 @@ config ZMK_WPM
 
 endif
 
+if SHIELD_TASTATURR_RIGHT
+config ZMK_USB
+    default n
+endif
+
 if SHIELD_TASTATURR_LEFT || SHIELD_TASTATURR_RIGHT
 
 config ZMK_SPLIT
