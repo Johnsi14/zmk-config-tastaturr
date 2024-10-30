@@ -34,4 +34,7 @@ config LED
     bool
     default y
 
+config ZMK_WPM 
+    bool
+    default y
 endif
