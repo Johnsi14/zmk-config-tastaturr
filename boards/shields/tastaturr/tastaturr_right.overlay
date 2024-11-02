@@ -2,3 +2,21 @@
 &default_transform { // Offset of 3 because the left side has 3 columns
     col-offset = <6>;
 };
+
+&kscan0 {
+    row-gpios
+        = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  7
+        , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>8
+        , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>9
+        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>10
+        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>16
+        ;
+    col-gpios
+        = <&pro_micro 14 GPIO_ACTIVE_HIGH>14
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>15
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>18
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>19
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>20
+        , <&pro_micro 21 GPIO_ACTIVE_HIGH>21
+        ;
+}
