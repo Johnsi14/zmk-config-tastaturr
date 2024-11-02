@@ -21,6 +21,17 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_sys {
+            timeout-ms = <50>;
+            key-positions = <0 1 2 3>;
+            bindings = <&tog SYS>;
+        };
+    };
+};
+
+/ {
     macros {
         macro_ae: macro_ae {
             compatible = "zmk,behavior-macro";
@@ -175,7 +186,7 @@
 &sys_reset          &bootloader       &none               &bt BT_CLR         &bt BT_NXT         &bt BT_PRV                          &none   &none   &none   &none   &bootloader     &sys_reset 
 &ext_power EP_ON    &rgb_ug RGB_ON    &rgb_ug RGB_BRI     &rgb_ug RGB_SPI    &rgb_ug RGB_EFF    &none                               &none   &none   &none   &none   &none           &ext_power EP_ON
 &ext_power EP_OFF   &rgb_ug RGB_OFF   &rgb_ug RGB_BRD     &rgb_ug RGB_SPD    &rgb_ug RGB_EFR    &none                               &none   &none   &none   &none   &none           &ext_power EP_OFF
-&soft_off           &none             &none               &none              &none              &none       &tog DEU     &tog GAM   &none   &none   &none   &none   &none           &soft_off 
+&soft_off           &none             &none               &none              &none              &tog SYS    &tog DEU     &tog GAM   &none   &none   &none   &none   &none           &soft_off 
                                                                              &none              &none       &none        &none      &none   &none
             >;
 
