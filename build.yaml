@@ -20,6 +20,6 @@
 
 include:
  - board: nice_nano_v2
-   shield: tastaturr_left nice_view
+   shield: tastaturr_left
  - board: nice_nano_v2
-   shield: tastaturr_right nice_view
+   shield: tastaturr_right

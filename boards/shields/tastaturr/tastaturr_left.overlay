@@ -1,5 +1,6 @@
 #include "tastaturr.dtsi"
 
+/*
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -16,6 +17,7 @@
         };
     };
 };
+*/
 
 &kscan0 {
         row-gpios
