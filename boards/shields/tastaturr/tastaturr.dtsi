@@ -35,11 +35,11 @@ nice_view_spi: &spi0 {
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";    
 
-         SPI 
+        /* SPI */
         reg = <0>;
         spi-max-frequency = <4000000>;
 
-         WS2812 
+        /* WS2812 */
         chain-length = <37>;
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
@@ -86,7 +86,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
     };
 };
 
-/*
+
 &pro_micro_i2c {
     status = "disabled";
-}; */
+};
