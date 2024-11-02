@@ -2,7 +2,7 @@
 &default_transform { // Offset of 3 because the left side has 3 columns
     col-offset = <6>;
 };
-/*
+
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -18,7 +18,7 @@
             low-power-enable;
         };
     };
-}; */
+};
 
 &kscan0 {
     row-gpios
