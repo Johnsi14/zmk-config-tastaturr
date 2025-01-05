@@ -129,14 +129,14 @@
             tapping-term-ms = <200>;
             bindings = <&macro_ae>, <&kp>;
         };
-        ue: ae {
+        ue: ue {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-prefered";
             tapping-term-ms = <200>;
             bindings = <&macro_ue>, <&kp>;
         };
-        oe: ae {
+        oe: oe {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-prefered";
