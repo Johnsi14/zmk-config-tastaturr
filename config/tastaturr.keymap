@@ -1,0 +1,221 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/rgb.h>
+
+#define BAS 0
+#define DEU 1
+#define GAM 2
+#define SYM 3
+#define SYS 4
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+
+    /delete-property/ ignore-modifiers;
+};
+
+&soft_off {
+    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_sys {
+            timeout-ms = <50>;
+            key-positions = <37 38 39 40>;
+            bindings = <&tog SYS>;
+        };
+
+        combo_sys_right {
+            bindings = <&tog 4>;
+            key-positions = <45 46 47 48>;
+        };
+    };
+};
+
+/ {
+    macros {
+        macro_ae: macro_ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp RALT &kp Q>;
+        };
+
+        macro_ue: macro_ue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp RALT &kp Y>;
+        };
+
+        macro_oe: macro_oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp RALT &kp P>;
+        };
+
+        macro_wdf: macro_wdf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp DELETE &kp LEFT_CONTROL>;
+        };
+
+        macro_wdr: macro_wdr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <&kp BACKSPACE &kp LEFT_CONTROL>;
+        };
+    };
+
+    behaviors {
+        morph_LBKTT: morph_LBKTT {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LT>;
+
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        morph_LBKT: morph_LBKT {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&morph_LBKTT>;
+
+            mods = <(MOD_LCTL |MOD_RCTL)>;
+        };
+
+        morph_RBKTT: morph_RBKTT {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp GT>;
+
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        morph_RBKT: morph_RBKT {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&morph_RBKTT>;
+
+            mods = <(MOD_LCTL |MOD_RCTL)>;
+        };
+
+        morph_BCKSP: morph_BCKSP {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Home {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            bindings = <
+&kp ESC                         &kp N1  &kp N2  &kp N3  &kp N4            &kp N5                              &kp N6     &kp N7          &kp N8     &kp N9      &kp N0     &kp APOS
+&kp TAB                         &kp Q   &kp W   &kp F   &kp P             &kp B                               &kp J      &kp L           &kp U      &kp Y       &kp SEMI   &kp MINUS
+&mt RIGHT_SHIFT LEFT_SHIFT      &kp A   &kp R   &kp S   &kp T             &kp G                               &kp M      &kp N           &kp E      &kp I       &kp O      &mt RALT LALT
+&mt RIGHT_CONTROL LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp D             &kp V      &kp LBKT  &kp RBKT       &kp K      &kp H           &kp COMMA  &kp PERIOD  &kp SLASH  &mt GRAVE LGUI
+                                                        &sk LEFT_CONTROL  &kp SPACE  &sl SYM   &kp BACKSPACE  &kp ENTER  &sk LEFT_SHIFT
+            >;
+        };
+
+        Deutsch {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            bindings = <
+&trans  &trans     &trans  &trans     &trans  &trans                  &trans  &trans  &trans  &trans     &trans  &trans
+&trans  &trans     &trans  &trans     &trans  &trans                  &trans  &trans  &mt U   &macro_ue  &trans  &trans
+&trans  &trans     &mt A   &macro_ae  &trans  &trans                  &trans  &trans  &trans  &trans     &trans  &trans
+&mt O   &macro_oe  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans
+                                      &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Gaming {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            bindings = <
+&kp ESC                         &kp N1  &kp N2  &kp N3  &kp N4          &kp N5                         &kp N6     &kp N7            &kp N8     &kp N9      &kp N0     &kp N1
+&kp TAB                         &kp Q   &kp W   &kp F   &kp P           &kp B                          &kp J      &kp L             &kp U      &kp Y       &kp SEMI   &kp N1
+&mt RIGHT_SHIFT LEFT_SHIFT      &kp A   &kp R   &kp S   &kp T           &kp G                          &kp M      &kp N             &kp E      &kp I       &kp O      &kp LALT
+&mt RIGHT_CONTROL LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp D           &kp V      &kp LBKT  &kp RBKT  &kp K      &kp H             &kp COMMA  &kp PERIOD  &kp SLASH  &kp LGUI
+                                                        &sk LEFT_SHIFT  &kp SPACE  &mo 2     &mo 3     &kp ENTER  &sk LEFT_CONTROL
+            >;
+        };
+
+        Symbol {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            bindings = <
+&kp F1  &kp F2     &kp F3    &kp F4     &kp F5       &kp F6                        &kp F7      &kp F8      &kp F9     &kp F10    &kp F11      &kp F12
+&trans  &kp PG_UP  &mkp MB3  &kp PG_DN  &kp K_UNDO   &kp K_AGAIN                   &kp EQUAL   &kp BSLH    &kp UNDER  &kp AMPS   &trans       &trans
+&trans  &mkp MB1   &kp UP    &mkp MB2   &kp K_COPY   &kp K_CUT                     &kp PLUS    &kp PIPE    &kp TILDE  &kp PRCNT  &key_repeat  &trans
+&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp K_PASTE  &kp CAPS     &trans   &trans  &macro_wdr  &macro_wdf  &kp K_APP  &trans     &trans       &trans
+                                        &trans       &trans       &mo BAS  &trans  &trans      &trans
+            >;
+        };
+
+        Behaviour {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            bindings = <
+&sys_reset         &bootloader      &none            &bt BT_CLR       &bt BT_NXT       &bt BT_PRV                      &none  &none  &none  &none  &bootloader  &sys_reset
+&ext_power EP_ON   &rgb_ug RGB_ON   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &none                           &none  &none  &none  &none  &none        &ext_power EP_ON
+&ext_power EP_OFF  &rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &none                           &none  &none  &none  &none  &none        &ext_power EP_OFF
+&soft_off          &none            &none            &none            &none            &tog SYS    &tog DEU  &tog GAM  &none  &none  &none  &none  &none        &soft_off
+                                                                      &none            &none       &none     &none     &none  &none
+            >;
+        };
+    };
+};
+
+// Layer 1 Normales Home
+// Layer 2 Deutsches Home                   Im Behaviour Layer Enable / Disable
+// Layer 3 FN tasten und Symbole            Im Base Layer       Bis nächste Taste und  Permanent
+// Layer 5 Behaviour                        Im Base Layer beide Layer Gleichzeitig Bis nächste Taste
+// Layer 4 Gaming                           Im Behaviour Layer Enable / Disable

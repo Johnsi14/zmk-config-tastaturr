@@ -1,7 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/led/led.h>
 
-/* &pinctrl {
+&pinctrl {
     spi3_default: spi3_default {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 8)>;
@@ -14,16 +14,16 @@
             low-power-enable;
         };
     };
-}; */
+}; 
 
-/* nice_view_spi: &spi0 {
+nice_view_spi: &spi0 {
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-}; */
-/*
+}; 
+
 &spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
@@ -35,11 +35,11 @@
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";    
 
-         SPI 
+        /* SPI */
         reg = <0>;
         spi-max-frequency = <4000000>;
 
-         WS2812 
+        /* WS2812 */
         chain-length = <37>;
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
@@ -48,7 +48,7 @@
                           LED_COLOR_ID_BLUE>;
   };
 };
-*/
+
 
 / {
     default_layout: default_layout {
@@ -81,12 +81,12 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
 
-        diode-direction = "col2row";
+        diode-direction = "row2col";
 
     };
 };
 
-/*
+
 &pro_micro_i2c {
     status = "disabled";
-}; */
+};
