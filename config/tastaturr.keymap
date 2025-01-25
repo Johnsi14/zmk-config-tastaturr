@@ -7,10 +7,10 @@
 
 #define BAS 0
 #define DEU 1
-#define GAM 3
 #define SYM 2
-#define SYS 5
+#define GAM 3
 #define GAMSYM 4
+#define SYS 5
 
 &sk {
     release-after-ms = <2000>;
@@ -158,11 +158,11 @@
 
         Home {
             bindings = <
-&kp ESC                         &kp N1  &kp N2  &kp N3  &kp N4            &kp N5                              &kp N6     &kp N7          &kp N8     &kp N9      &kp N0     &kp APOS
-&kp TAB                         &kp Q   &kp W   &kp F   &kp P             &kp B                               &kp J      &kp L           &kp U      &kp Y       &kp SEMI   &kp MINUS
-&mt RIGHT_SHIFT LEFT_SHIFT      &kp A   &kp R   &kp S   &kp T             &kp G                               &kp M      &kp N           &kp E      &kp I       &kp O      &mt RALT LALT
-&mt RIGHT_CONTROL LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp D             &kp V      &kp LBKT  &kp RBKT       &kp K      &kp H           &kp COMMA  &kp PERIOD  &kp SLASH  &mt GRAVE LGUI
-                                                        &sk LEFT_CONTROL  &kp SPACE  &sl SYM   &kp BACKSPACE  &kp ENTER  &sk LEFT_SHIFT
+&kp ESC                         &kp N1  &kp N2  &kp N3  &kp N4      &kp N5                                  &kp N6     &kp N7          &kp N8     &kp N9      &kp N0     &kp APOS
+&kp TAB                         &kp Q   &kp W   &kp F   &kp P       &kp B                                   &kp J      &kp L           &kp U      &kp Y       &kp SEMI   &kp MINUS
+&mt RIGHT_SHIFT LEFT_SHIFT      &kp A   &kp R   &kp S   &kp T       &kp G                                   &kp M      &kp N           &kp E      &kp I       &kp O      &kp LALT
+&mt RIGHT_CONTROL LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp D       &kp V      &morph_LBKT  &morph_RBKT     &kp K      &kp H           &kp COMMA  &kp PERIOD  &kp SLASH  &kp LGUI
+                                                        &sk LCTRL   &kp SPACE  &sl SYM      &kp BACKSPACE   &kp ENTER  &sk LEFT_SHIFT
             >;
         };
 
@@ -171,18 +171,18 @@
 &trans      &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans      &trans      &trans  &trans
 &trans      &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &ue 0 U     &trans      &trans  &trans
 &trans      &ae 0 A &trans  &trans  &trans  &trans                  &trans  &trans  &trans      &trans      &oe 0 O &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans      &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans      &trans  &trans
                                     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
         
         Symbol {
             bindings = <
-&kp F1  &kp F2     &kp F3    &kp F4     &kp F5       &kp F6                        &kp F7      &kp F8      &kp F9     &kp F10    &kp F11      &kp F12
-&trans  &kp PG_UP  &mkp MB3  &kp PG_DN  &kp K_UNDO   &kp K_AGAIN                   &kp EQUAL   &kp BSLH    &kp UNDER  &kp AMPS   &trans       &trans
-&trans  &mkp MB1   &kp UP    &mkp MB2   &kp K_COPY   &kp K_CUT                     &kp PLUS    &kp PIPE    &kp TILDE  &kp PRCNT  &key_repeat  &trans
-&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp K_PASTE  &kp CAPS     &trans   &trans  &macro_wdr  &macro_wdf  &kp K_APP  &trans     &trans       &trans
-                                        &trans       &trans       &mo BAS  &trans  &trans      &trans
+        &kp F1  &kp F2     &kp F3    &kp F4     &kp F5       &kp F6                        &kp F7      &kp F8      &kp F9     &kp F10    &kp F11      &kp F12
+        &trans  &kp PG_UP  &mkp MB3  &kp PG_DN  &kp K_UNDO   &kp K_AGAIN                   &kp EQUAL   &kp BSLH    &kp UNDER  &kp AMPS   &trans       &trans
+        &trans  &mkp MB1   &kp UP    &mkp MB2   &kp K_COPY   &kp K_CUT                     &kp PLUS    &kp PIPE    &kp TILDE  &kp PRCNT  &key_repeat  &trans
+        &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp K_PASTE  &kp CAPS     &trans   &trans  &macro_wdr  &macro_wdf  &kp K_APP  &trans     &trans       &trans
+                                                &trans       &trans       &mo BAS  &trans  &trans      &trans
             >;
         };
 
@@ -223,11 +223,3 @@
 // Layer 3 FN tasten und Symbole            Im Base Layer       Bis nächste Taste und  Permanent
 // Layer 5 Behaviour                        Im Base Layer beide Layer Gleichzeitig Bis nächste Taste
 // Layer 4 Gaming                           Im Behaviour Layer Enable / Disable
-
-
-// TODO
-
-// Fix Brackets
-// Add letters  to sys layout
-// Window Managing Layout
-// Test in Real Life
